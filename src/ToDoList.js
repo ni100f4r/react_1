@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import style from './ToDoList.module.css'
-import className from 'classnames'
+import TodoListItem from './TodoListItem'
 
 
 export class ToDoList extends Component {
@@ -69,11 +69,23 @@ export class ToDoList extends Component {
         this.setState(prevState => {
             return {
                 todos : prevState.todos.map((task,i) => {
-                    if( i== index) return {...task, done : !task.done}
+                    if( i === index) return {...task, done : !task.done}
                     else return task
                 })
             }
         });
+    }
+
+    edit = (newName, index) => {
+        this.setState(prevState => {
+            return {
+                todos: prevState.todos.map((task,i) => {
+                    if(i === index) return {...task, name: newName}
+                    else return task;
+                })
+            }
+        }
+        );
     }
 
     render() {
@@ -84,17 +96,12 @@ export class ToDoList extends Component {
                 <ul className={style.list_style}>
                     {
                     this.getTodos().map((task, index) => (
-                    <li style={{display: "flex", flexDirection : "row", flexWrap: "wrap", alignContent: "space-around", width: "300px"}}>
-                        <div>
-                        <button className={className(style.eddit_btn, {testClass : false})} onClick={() => this.toggle(index)} style={{marginRight : "5px"}}>
-                            {task.done ? 'Done' : 'Un-Done'} 
-                        </button>
-                        <button className={style.eddit_btn} style={{marginRight : "5px"}}>Edit</button>
-                        <button className={style.eddit_btn} onClick={() => this.delete(index)} style={{marginRight : "5px"}}>Delete</button>
-                        </div>
-                        <div style={{marginLeft: "auto", textDecoration: task.done ? 'none' : 'line-through'}}>{task.name}</div>
-                    </li>
-                    )
+                        <TodoListItem {...task} 
+                        onToggle={()=> this.toggle(index)} 
+                        onDelete={()=> this.delete(index)}
+                        onEdit={(newName)=> this.edit(newName, index)}
+                        ></TodoListItem>
+                        )
                     )
                     }
                 </ul>

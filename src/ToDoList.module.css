@@ -69,3 +69,7 @@ padding-inline-start: 0px !important;
     /* background-color: #3e8e41; */
     cursor: pointer;
   }
+
+  .filter_btn:focus {
+      background-color: rgb(248, 105, 243);
+  }
