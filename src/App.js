@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Timer from './Timer';
+import ToDoList from './ToDoList';
+import Counter from './counter';
+import HookExample from './testHooks';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    showTimer : false,
+    value : 0
+  }
+
+  componentDidMount() {
+    //==========================================================================
+    // setTimeout(()=>{
+    //   this.setState(
+    //     {
+    //       showTimer : true,
+    //     }
+    //   )
+    // },3000);
+    //==========================================================================
+    // setInterval(() => {
+    //   this.setState(
+    //     {
+    //       showTimer : !this.state.showTimer,
+    //     }
+    //   )
+    // }, 5000);
+    //==========================================================================
+  }
+
+  render() {
+    return(
+      <div className="App">
+      <ToDoList buttonName="Add Todos List"></ToDoList>
+      {/* {this.state.showTimer ? <Timer></Timer>: null} */}
+      <Timer></Timer>
+       <Counter min={12} max={20}></Counter>
+       <HookExample></HookExample>
+     </div>
+    );
+  }
 }
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <ToDoList buttonName="Add Todos List"></ToDoList>
+//       <Timer></Timer>
+//       <Counter></Counter>
+//     </div>
+//   );
+// }
 
 export default App;

@@ -1,0 +1,51 @@
+.ToDoList {
+    border: 1px solid navy;
+    width: 350px;
+    padding: 0px 100px 30px 100px;  
+    margin-bottom: 8px;
+    background-color: plum;
+    border-radius: 4px;
+}
+
+.list_style {
+list-style: none;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-inline-start: 0px !important;
+}
+
+.input_style {
+    border-radius: 4px;
+    padding: 5px 8px;
+    margin: 0px 2px;
+    border-style: ridge;
+}
+.input_style:focus {
+    background-color: rgba(202, 202, 202, 0.678);
+    border-style: ridge;
+}
+
+.eddit_btn {
+    border-radius: 4px;
+    padding: 3px 6px;
+    margin: 0px 2px;
+    background-color: rgb(248, 105, 243);
+    border-style: ridge;
+}
+
+.eddit_btn:hover {
+    cursor: pointer;
+}
+
+.add_btn {
+    border-radius: 4px;
+    padding: 5px 8px;
+    margin: 0px 2px;
+    background-color: rgb(248, 105, 243);
+    border-style: ridge;
+}
+
+.add_btn:hover {
+    cursor: pointer;
+}

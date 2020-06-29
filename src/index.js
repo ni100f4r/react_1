@@ -15,3 +15,12 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+
+/*
+npm i react react-dom
+npm create-react-app
+npx create-react-app my-app
+cd my-app
+npm start
+*/
