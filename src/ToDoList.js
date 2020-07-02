@@ -7,7 +7,7 @@ export class ToDoList extends Component {
     state = {
         todos : [],
         inputValue : '',
-        filter : 'All'
+                filter : 'All'
     }
 
     setFilter = (filterName) => {
