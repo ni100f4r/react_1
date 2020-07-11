@@ -4,6 +4,7 @@ import Timer from './Timer';
 import ToDoList from './ToDoList';
 import Counter from './counter';
 import HookExample from './testHooks';
+import MouseTracker from './mouseTracker';
 
 class App extends Component {
   state = {
@@ -39,6 +40,7 @@ class App extends Component {
       <Timer></Timer>
        <Counter min={12} max={20}></Counter>
        <HookExample></HookExample>
+       <MouseTracker></MouseTracker>
      </div>
     );
   }
