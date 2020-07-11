@@ -1,3 +1,6 @@
+* {
+    transition: all 0.2s;
+}
 .ToDoList {
     border: 1px solid navy;
     width: 350px;
@@ -5,6 +8,12 @@
     margin-bottom: 8px;
     background-color: plum;
     border-radius: 4px;
+}
+
+.testSomething {
+    background-color: rgb(206, 49, 206);
+    border-radius: 4px;
+    padding: 5px 0px;
 }
 
 .list_style {
@@ -52,7 +61,6 @@ padding-inline-start: 0px !important;
 
 .filter_btn {
     padding: 2px 5px;
-    /* border-radius: 4px; */
     background-color: rgb(199, 132, 199);
     border-style: ridge;
     border-collapse: collapse;
@@ -70,6 +78,6 @@ padding-inline-start: 0px !important;
     cursor: pointer;
   }
 
-  .filter_btn:focus {
-      background-color: rgb(248, 105, 243);
+  .active_btn {
+    background-color: rgb(248, 105, 243);
   }
