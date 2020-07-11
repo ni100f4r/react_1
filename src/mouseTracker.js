@@ -11,7 +11,9 @@ export class MouseTracker extends Component {
         }}
       >
         <h2>Mouse Tracker</h2>
-        <hr></hr>
+        <hr style={{
+          width: '350px',
+        }}></hr>
         {/* <div style={{
             border: '2px solid navy',
             width: '400px',
