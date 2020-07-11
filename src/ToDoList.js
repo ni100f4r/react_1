@@ -35,7 +35,7 @@ export class ToDoList extends Component {
     // id++;
     this.setState((prevState) => {
       return {
-        todos: [...prevState.todos, { name: taskName, done: "false", id: id++fi }],
+        todos: [...prevState.todos, { name: taskName, done: "false", id: id }],
       };
     });
   };
@@ -43,6 +43,7 @@ export class ToDoList extends Component {
   handeleAddtoPress = () => {
     if (this.state.inputValue) {
       this.add(this.state.inputValue);
+      id++;
       this.setState({
         inputValue: "",
       });
