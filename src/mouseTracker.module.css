@@ -10,3 +10,19 @@
     background-color: plum;
     border-radius: 4px;
 }
+
+.tracker {
+    position: relative;
+    border:  1px solid black;
+    width: 350px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.draw {
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    width: 6px;
+    height: 6px;
+}
